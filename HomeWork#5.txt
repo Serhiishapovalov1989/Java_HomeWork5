@@ -1,0 +1,46 @@
+Home Work #5
+
+1. Задание вывода числа ближе к 10_______________________________________________________________________
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите два числа");
+        Scanner scanner = new Scanner(System.in);
+        float a = scanner.nextFloat();
+        float b = scanner.nextFloat();
+        float c = Math.abs(10 - a);
+        float d = Math.abs(10 - b);
+        if (c == d) {
+            System.out.println("Оба числа одинаково близки");
+        }
+        if (c > d) {
+            System.out.println(b + " ближе к 10");
+        } else {
+            System.out.println(a + " ближе к 10");
+        }
+    }
+}
+
+
+2. Задание с выводом в консоль остатка рабочего времени__________________________________________________________________________
+
+public class Main {
+    public static void main(String[] args) {
+        calculate(2000);
+    }
+
+    public static void calculate(int seconds) {
+        int hours = seconds / 3600;
+        if (hours >= 8) System.out.println("Это больше чем полный рабочий день");
+        else if (hours >= 5) System.out.println("Осталось " + seconds / 3600 + " часов");
+        else if (hours < 5 && hours >= 2) System.out.println("Осталось " + seconds / 3600 + " часа");
+        else if (hours < 2 && hours >= 1) System.out.println("Остался 1 час");
+        else if (hours < 1 && hours >= 0) System.out.println("Осталось менее одного часа");
+        else System.out.println("Число должно быть положительным");
+    }
+}
+
+
+
